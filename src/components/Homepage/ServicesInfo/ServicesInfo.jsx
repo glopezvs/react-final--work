@@ -30,7 +30,7 @@ export default function Services({
       });
   }, []);
   return (
-    <div>
+    <div className={styles["service-wrapper"]}>
       {showIcons && (
         <div className={styles["icons-wrapper"]}>
           <img className={styles.icons} src={reactIcon} alt="" />

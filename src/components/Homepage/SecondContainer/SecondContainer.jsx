@@ -3,9 +3,9 @@ import OtherInfo from "../OtherInfo/OtherInfo";
 
 export default function SecondContainer({ infoToShow }) {
   return (
-    <div>
+    <div className={styles.whiteRect}>
       {infoToShow && (
-        <div className={styles.whiteRect}>
+        <>
           {infoToShow === "showcase" && (
             <OtherInfo
               dataToShow="showcase"
@@ -27,7 +27,7 @@ export default function SecondContainer({ infoToShow }) {
               showIcons={true}
             />
           )}
-        </div>
+        </>
       )}
     </div>
   );

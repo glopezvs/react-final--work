@@ -30,6 +30,7 @@ export default function OtherInfo({
             <img className={styles["more-img--wrapper"]} src={more} alt="" />
           </div>
         )}
+
         <div>
           {showIcons && (
             <div className={styles["icons-wrapper"]}>
