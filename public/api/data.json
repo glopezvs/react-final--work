@@ -1,0 +1,18 @@
+{
+  "name": "Gabriela",
+  "surname": "Lopez",
+  "age": 24,
+  "about": "I'm a front-end developer based in Aveiro, Portugal.",
+  "image": "logo.png",
+  "credential": "Credentials",
+  "more": "More about me",
+  "projects": "Projects",
+  "showcase": "showcase",
+  "profiles": "Profiles",
+  "stay": "stay with me",
+  "specialization": "specialization",
+  "services": "Services Offering",
+  "title": "Let's",
+  "work": "work",
+  "together": "together"
+}

@@ -1,0 +1,43 @@
+.other-info--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .icons-wrapper {
+    display: flex;
+    gap: 20px;
+
+    .icons-border {
+      border: #155d92 1px solid;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .icons {
+      width: 55px;
+      height: 55px;
+      padding: 20px;
+    }
+  }
+  .img-wrapper {
+    width: 200px;
+    height: 100px;
+    .more-img--wrapper {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+  }
+  .text-wrapper {
+    .grey-text {
+      text-transform: uppercase;
+      margin: 0;
+      color: #bcbcbc;
+      padding: 5px 0;
+    }
+    .bold-text {
+      font-weight: 600;
+      color: #155d92;
+      margin: 0;
+    }
+  }
+}
