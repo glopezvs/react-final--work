@@ -46,7 +46,8 @@ export default function Services({
           <img className={styles.stars} src={stars} alt="" />
         </div>
       )}
-      <div>
+
+      <div className={styles["services-titles"]}>
         <p
           className={`${styles["grey-text"]} ${
             isBigTitle ? styles["big-title"] : ""

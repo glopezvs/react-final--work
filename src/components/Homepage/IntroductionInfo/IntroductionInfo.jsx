@@ -15,18 +15,22 @@ export default function Introduction() {
         console.error("Error fetching data:", error);
       });
   }, []);
+
   return (
     <div className={styles["introduction-wrapper"]}>
-      <div className={styles["user-img--container"]}>
+      <div className={styles["user-img--wrapper"]}>
         <img src={pic} alt="" />
       </div>
-      <div className={styles.info}>
-        <span className={styles.about}>A front-end Developer</span>
+
+      {/* show about me information*/}
+
+      <div className={styles["info-wrapper"]}>
+        <span className={styles.job}>A front-end Developer</span>
         <div className={styles["name-wrapper"]}>
           <span className={styles["full-name"]}>{userData.name}</span>
-          <span className={styles["full-name"]}>{userData.surname}.</span>
+          <span className={styles["full-name"]}>{userData.surname}</span>
         </div>
-        <p className={styles.about}>{userData.about}</p>
+        <p className={styles.job}>{userData.about}</p>
       </div>
     </div>
   );

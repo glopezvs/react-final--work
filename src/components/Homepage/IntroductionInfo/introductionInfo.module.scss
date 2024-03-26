@@ -4,7 +4,7 @@
   align-items: center;
   flex: 1;
 
-  .user-img--container {
+  .user-img--wrapper {
     width: 250px;
     height: 190px;
 
@@ -16,13 +16,13 @@
     }
   }
 }
-.info {
+.info-wrapper {
   display: inline-flex;
   flex-direction: column;
-  .about:first-child {
+  .job:first-child {
     text-transform: uppercase;
   }
-  .about {
+  .job {
     margin: 0;
     color: #bcbcbc;
     padding: 5px 0;
@@ -34,7 +34,7 @@
 
     .full-name {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: bold;
       color: rgb(39, 39, 39);
     }

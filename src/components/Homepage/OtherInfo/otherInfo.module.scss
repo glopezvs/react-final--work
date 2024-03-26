@@ -1,7 +1,7 @@
 .other-info--wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 
   .icons-wrapper {
     display: flex;
@@ -22,10 +22,11 @@
   }
   .img-wrapper {
     width: 200px;
-    height: 100px;
+    height: 125px;
+
     .more-img--wrapper {
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
       border-radius: 10px;
     }
   }
