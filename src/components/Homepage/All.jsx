@@ -13,11 +13,11 @@ import behance from "../../assets/behance.svg";
 import cover from "../../assets/more.jpg";
 
 export default function All({
-  showIntroduction = false,
-  showCredentials = false,
-  showServices = false,
-  showSocials = false,
-  showBigTitle = false,
+  showIntroduction = true,
+  showCredentials = true,
+  showServices = true,
+  showSocials = true,
+  showBigTitle = true,
 }) {
   const [userData, setUserData] = useState(null);
 
@@ -57,14 +57,20 @@ export default function All({
 
       {showCredentials && (
         <div className={styles["single-background"]}>
-          <div className={styles["cover-wrapper"]}>
-            <img className={styles["more-cover--wrapper"]} src={cover} alt="" />
-          </div>
+          <div className={styles["show-credentials--wrapper"]}>
+            <div className={styles["cover-wrapper"]}>
+              <img
+                className={styles["more-cover--wrapper"]}
+                src={cover}
+                alt=""
+              />
+            </div>
 
-          {/* show small container title*/}
-          <div className={styles["titles-wrapper"]}>
-            <p className={styles["grey-text"]}>{userData.more}</p>
-            <p className={styles["bold-text"]}>{userData.credential}</p>
+            {/* show small container title*/}
+            <div className={styles["titles-wrapper"]}>
+              <p className={styles["grey-text"]}>{userData.more}</p>
+              <p className={styles["bold-text"]}>{userData.credential}</p>
+            </div>
           </div>
         </div>
       )}
@@ -90,40 +96,44 @@ export default function All({
 
       {showSocials && (
         <div className={styles["single-background"]}>
-          {/* Show social icons */}
-          <div className={styles["icons-social--wrapper"]}>
-            <div className={styles["icons-social--border"]}>
-              <img className={styles["icons-social"]} src={behance} alt="" />
+          <div className={styles["social-wrapper"]}>
+            {/* Show social icons */}
+            <div className={styles["icons-social--wrapper"]}>
+              <div className={styles["icons-social--border"]}>
+                <img className={styles["icons-social"]} src={behance} alt="" />
+              </div>
+              <div className={styles["icons-social--border"]}>
+                <img className={styles["icons-social"]} src={linkedln} alt="" />
+              </div>
             </div>
-            <div className={styles["icons-social--border"]}>
-              <img className={styles["icons-social"]} src={linkedln} alt="" />
-            </div>
-          </div>
 
-          {/* Show small container title */}
-          <div className={styles["titles-wrapper"]}>
-            <p className={styles["grey-text"]}>{userData.stay}</p>
-            <p className={styles["bold-text"]}>{userData.profiles}</p>
+            {/* Show small container title */}
+            <div className={styles["titles-wrapper"]}>
+              <p className={styles["grey-text"]}>{userData.stay}</p>
+              <p className={styles["bold-text"]}>{userData.profiles}</p>
+            </div>
           </div>
         </div>
       )}
 
       {showBigTitle && (
         <div className={styles["single-background"]}>
-          <div className={styles["stars-wrapper"]}>
-            <img className={styles.stars} src={stars} alt="" />
-          </div>
+          <div className={styles["big-title--wrapper"]}>
+            <div className={styles["stars-wrapper"]}>
+              <img className={styles.stars} src={stars} alt="" />
+            </div>
 
-          <div className={styles["big-tittle--wrapper"]}>
-            <p className={styles["big-title"]}>{userData.let}</p>
+            <div className={styles["big-wrapper"]}>
+              <p className={styles["big-title"]}>{userData.let}</p>
 
-            <p className={styles["big-title"]}>
-              {userData.work}
+              <p className={styles["big-title"]}>
+                {userData.work}
 
-              <span className={styles["alternative-text"]}>
-                {userData.together}
-              </span>
-            </p>
+                <span className={styles["alternative-text"]}>
+                  {userData.together}
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       )}

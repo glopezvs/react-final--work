@@ -12,7 +12,6 @@
   display: flex;
   gap: 30px;
   align-items: center;
-  flex: 1;
 
   .user-img--wrapper {
     width: 250px;
@@ -25,28 +24,44 @@
       border-radius: 10% 0 10% 0;
     }
   }
-}
-.info-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-  .job:first-child {
-    text-transform: uppercase;
-  }
-  .job {
-    margin: 0;
-    color: #bcbcbc;
-    padding: 5px 0;
-    max-width: 80%;
-  }
-  .name-wrapper {
-    display: flex;
+  .info-wrapper {
+    display: inline-flex;
     flex-direction: column;
-
-    .full-name {
+    .job:first-child {
+      text-transform: uppercase;
+    }
+    .job {
       margin: 0;
-      font-size: 2rem;
-      font-weight: bold;
-      color: rgb(39, 39, 39);
+      color: #bcbcbc;
+      padding: 5px 0;
+      max-width: 80%;
+    }
+    .name-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .full-name {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(39, 39, 39);
+      }
+    }
+  }
+}
+
+.show-credentials--wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  .cover-wrapper {
+    width: 200px;
+    height: 125px;
+
+    .more-cover--wrapper {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
   }
 }
@@ -84,33 +99,10 @@
   }
 }
 
-.big-tittle--wrapper {
-  .big-title {
-    font-size: 2.5rem;
-    margin: 0;
-    color: rgb(39, 39, 39);
-  }
-
-  .alternative-text {
-    color: #155d92;
-    font-size: 2.5rem;
-    padding: 10px;
-  }
-}
-
-.stars-wrapper {
-  width: 50px;
-  transform: translate(0, -20px);
-  .stars {
-    width: 100%;
-  }
-}
-
-.other-info--wrapper {
+.social-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-
+  gap: 30px;
+  align-items: center;
   .icons-social--wrapper {
     display: flex;
     gap: 20px;
@@ -121,21 +113,35 @@
       display: flex;
       align-items: center;
       justify-self: center;
-    }
-    .icons-social {
-      width: 55px;
-      height: 55px;
-      padding: 20px;
+
+      .icons-social {
+        width: 55px;
+        height: 55px;
+        padding: 20px;
+      }
     }
   }
-  .cover-wrapper {
-    width: 200px;
-    height: 125px;
+}
 
-    .more-cover--wrapper {
+.big-title--wrapper {
+  .big-wrapper {
+    .big-title {
+      font-size: 2.5rem;
+      margin: 0;
+      color: rgb(39, 39, 39);
+    }
+
+    .alternative-text {
+      color: #155d92;
+      font-size: 2.5rem;
+      padding: 10px;
+    }
+  }
+  .stars-wrapper {
+    width: 50px;
+    transform: translate(0, -20px);
+    .stars {
       width: 100%;
-      object-fit: cover;
-      border-radius: 10px;
     }
   }
 }
