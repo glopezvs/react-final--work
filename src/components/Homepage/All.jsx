@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
 import styles from "../Homepage/all.module.scss";
-
 import reactIcon from "../../assets/react.svg";
 import cssIcon from "../../assets/css.svg";
 import htmlIcon from "../../assets/html.svg";
@@ -13,14 +11,15 @@ import linkedln from "../../assets/linkedin.svg";
 import behance from "../../assets/behance.svg";
 import cover from "../../assets/more.jpg";
 
-export default function All(
+export default function All({
   showIntroduction = false,
   showCredentials = false,
+  showProjects = false,
   showServices = false,
   showSocials = false,
-  showBigTitle = false
-) {
-  const [userData, setUserData] = useState([null]);
+  showBigTitle = false,
+}) {
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     fetch("api/data.json")
@@ -41,16 +40,13 @@ export default function All(
             <div className={styles["user-img--wrapper"]}>
               <img src={pic} alt="" />
             </div>
-
-            {/* show about me information*/}
-
             <div className={styles["info-wrapper"]}>
               <span className={styles.job}>A front-end Developer</span>
               <div className={styles["name-wrapper"]}>
-                <span className={styles["full-name"]}>{userData.name}</span>
-                <span className={styles["full-name"]}>{userData.surname}</span>
+                <span className={styles["full-name"]}>{userData?.name}</span>
+                <span className={styles["full-name"]}>{userData?.surname}</span>
               </div>
-              <p className={styles.job}>{userData.about}</p>
+              <p className={styles.job}>{userData?.about}</p>
             </div>
           </div>
         </div>
@@ -66,11 +62,27 @@ export default function All(
                 alt=""
               />
             </div>
-
-            {/* show small container title*/}
             <div className={styles["titles-wrapper"]}>
-              <p className={styles["grey-text"]}>{userData.more}</p>
-              <p className={styles["bold-text"]}>{userData.credential}</p>
+              <p className={styles["grey-text"]}>{userData?.more}</p>
+              <p className={styles["bold-text"]}>{userData?.credential}</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showProjects && (
+        <div className={styles["single-background"]}>
+          <div className={styles["show-credentials--wrapper"]}>
+            <div className={styles["cover-wrapper"]}>
+              <img
+                className={styles["more-cover--wrapper"]}
+                src={cover}
+                alt=""
+              />
+            </div>
+            <div className={styles["titles-wrapper"]}>
+              <p className={styles["grey-text"]}>{userData?.showcase}</p>
+              <p className={styles["bold-text"]}>{userData?.projects}</p>
             </div>
           </div>
         </div>
@@ -86,10 +98,9 @@ export default function All(
               <img className={styles["icons-service"]} src={jsIcon} alt="" />
               <img className={styles["icons-service"]} src={figmaIcon} alt="" />
             </div>
-
             <div className={styles["titles-wrapper"]}>
-              <p className={styles["grey-text"]}>{userData.specialization}</p>
-              <p className={styles["bold-text"]}>{userData.services}</p>
+              <p className={styles["grey-text"]}>{userData?.specialization}</p>
+              <p className={styles["bold-text"]}>{userData?.services}</p>
             </div>
           </div>
         </div>
@@ -98,7 +109,6 @@ export default function All(
       {showSocials && (
         <div className={styles["single-background"]}>
           <div className={styles["social-wrapper"]}>
-            {/* Show social icons */}
             <div className={styles["icons-social--wrapper"]}>
               <div className={styles["icons-social--border"]}>
                 <img className={styles["icons-social"]} src={behance} alt="" />
@@ -107,11 +117,9 @@ export default function All(
                 <img className={styles["icons-social"]} src={linkedln} alt="" />
               </div>
             </div>
-
-            {/* Show small container title */}
             <div className={styles["titles-wrapper"]}>
-              <p className={styles["grey-text"]}>{userData.stay}</p>
-              <p className={styles["bold-text"]}>{userData.profiles}</p>
+              <p className={styles["grey-text"]}>{userData?.stay}</p>
+              <p className={styles["bold-text"]}>{userData?.profiles}</p>
             </div>
           </div>
         </div>
@@ -123,15 +131,12 @@ export default function All(
             <div className={styles["stars-wrapper"]}>
               <img className={styles.stars} src={stars} alt="" />
             </div>
-
             <div className={styles["big-wrapper"]}>
-              <p className={styles["big-title"]}>{userData.let}</p>
-
+              <p className={styles["big-title"]}>{userData?.let}</p>
               <p className={styles["big-title"]}>
-                {userData.work}
-
+                {userData?.work}
                 <span className={styles["alternative-text"]}>
-                  {userData.together}
+                  {userData?.together}
                 </span>
               </p>
             </div>

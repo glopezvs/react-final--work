@@ -8,7 +8,11 @@ export default function Homepage() {
   return (
     <div className={styles["homepage-wrapper"]}>
       <All showIntroduction={true} />
-
+      <All showSocials={true} />
+      <All showCredentials={true} />
+      <All showServices={true} />
+      <All showProjects={true} />
+      <All showBigTitle={true} />
       {/* 
       <FirstContainer />
       <SecondContainer infoToShow="showcase" />
