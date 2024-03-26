@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import styles from "../Homepage/all.module.scss";
 
 import reactIcon from "../../assets/react.svg";
@@ -12,17 +13,17 @@ import linkedln from "../../assets/linkedin.svg";
 import behance from "../../assets/behance.svg";
 import cover from "../../assets/more.jpg";
 
-export default function All({
-  showIntroduction = true,
-  showCredentials = true,
-  showServices = true,
-  showSocials = true,
-  showBigTitle = true,
-}) {
-  const [userData, setUserData] = useState(null);
+export default function All(
+  showIntroduction = false,
+  showCredentials = false,
+  showServices = false,
+  showSocials = false,
+  showBigTitle = false
+) {
+  const [userData, setUserData] = useState([null]);
 
   useEffect(() => {
-    fetch("http://localhost:5173/api/data.json")
+    fetch("api/data.json")
       .then((res) => res.json())
       .then((data) => {
         setUserData(data);
