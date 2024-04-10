@@ -1,14 +1,27 @@
+import ReactDOM from "react-dom";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Homepage from "./components/Homepage/Homepage";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Homepage from "./Pages/HomePage/Homepage.jsx";
+import About from "./Pages/AboutPage/About.jsx";
+import Contacts from "./Pages/ContactPage/Contacts.jsx";
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Homepage />
-    </>
-  );
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/contacts",
+    element: <Contacts />,
+  },
+]);
 
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <>
+    <RouterProvider router={router} />
+  </>
+);

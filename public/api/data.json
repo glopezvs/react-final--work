@@ -7,12 +7,33 @@
   "credential": "Credentials",
   "more": "More about me",
   "projects": "Projects",
-  "showcase": "showcase",
+  "showcase": "Showcase",
   "profiles": "Profiles",
   "stay": "stay with me",
   "specialization": "specialization",
   "services": "Services Offering",
   "let": "Let's",
   "work": "work",
-  "together": "together"
+  "together": "together",
+
+  "fullName": "Gabriela Lopez",
+  "aboutMe": "I'm Gabriela, an aspiring Junior Front-end Developer. I'm eager to expand my skills, make a meaningful impact, and gain hands-on experience to innovate and grow. Let's connect and bring ideas to life!",
+
+  "experience": "Experience",
+  "firstExperienceD": "March 2022 - June 2022",
+  "firstExperienceA": "Ui-UX Intern",
+  "firstExperienceP": "Softinsa",
+
+  "secondExperienceD": "March 2023 - Ongoing",
+  "secondExperienceA": "X",
+  "secondExperienceP": "Mercadona",
+
+  "education": "Education",
+  "firstEducationD": "September 2019 - September 2022",
+  "firstEducationA": "Licenciatura Tecnologias e Design de Multimédia",
+  "firstEducationP": "Instituto Politécnico de Viseu",
+
+  "secondEducationD": "September 2023 - April 2024",
+  "secondEducationA": "Full-Stack Web Development",
+  "secondEducationP": "EDIT - Disruptive Digital Education"
 }

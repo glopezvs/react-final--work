@@ -1,0 +1,26 @@
+.education-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+
+  .bold-font {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .education-info--wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .grey-font {
+      color: #bcbcbc;
+      font-size: 0.75rem;
+    }
+    .blue-font {
+      color: #155d92;
+      font-weight: 500;
+    }
+  }
+}
