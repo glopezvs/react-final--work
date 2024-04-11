@@ -1,16 +1,24 @@
-.button-header{
-	padding: 12px 25px;
- 	background: #323232;
-	border-radius: 18px;
-	color:rgb(249, 249, 249);
-	border: none;
-	font-family: Poppins
-	
+.button-wrapper {
+  .button-header {
+    padding: 12px 25px;
+    background: #323232;
+    border-radius: 18px;
+    color: rgb(249, 249, 249);
+    border: none;
+    font-family: Poppins;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    -moz-transition-duration: 0.6s;
+    -webkit-transition-duration: 0.6s;
+    -ms-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+  }
 }
-button:hover{
-	transform: scale(1.05);
-	-moz-transition-duration: 0.6s;
-	-webkit-transition-duration: 0.6s;
-	-ms-transition-duration: 0.6s;
-	transition-duration: 0.6s;
+
+@media only screen and (max-width: 600px) {
+  .button-header {
+    display: none; /* Hide menu items on mobile */
+  }
 }

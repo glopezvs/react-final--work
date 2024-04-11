@@ -1,6 +1,6 @@
 import styles from "../MenuOptions/menu.module.scss";
 import { NavLink } from "react-router-dom";
-
+import menu from "../../../assets/menu.svg";
 const Menu = () => {
   return (
     <div>
@@ -19,6 +19,7 @@ const Menu = () => {
             <NavLink to="/contacts">Contacts</NavLink>
           </li>
         </ul>
+        <img className={styles.menuImage} src={menu} alt="menu" />
       </nav>
     </div>
   );

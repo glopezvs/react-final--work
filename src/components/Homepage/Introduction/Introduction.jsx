@@ -33,7 +33,7 @@ export default function Introduction() {
         <img src={user} alt="" />
       </div>
       <div className={styles["info-wrapper"]}>
-        <span className={styles.job}>A front-end Developer</span>
+        <span className={styles.job}>A Jr. front-end Developer</span>
         <div className={styles["name-wrapper"]}>
           <span className={styles["full-name"]}>{userData?.name}</span>
           <span className={styles["full-name"]}>{userData?.surname}</span>

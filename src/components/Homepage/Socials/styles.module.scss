@@ -1,5 +1,6 @@
 .social-wrapper {
   display: flex;
+
   flex-direction: column;
   gap: 10px;
 
@@ -8,6 +9,7 @@
     gap: 20px;
     height: 145px;
     align-items: center;
+    justify-content: center;
 
     .icons-social--border {
       background: #eef3fa;
@@ -15,6 +17,7 @@
       display: flex;
       align-items: center;
       justify-self: center;
+
       .icons-social {
         width: 50px;
         height: 50px;
@@ -23,10 +26,12 @@
     }
   }
 }
+
 .bottom-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   .titles-wrapper {
     .grey-text {
       text-transform: uppercase;
@@ -34,23 +39,59 @@
       color: #bcbcbc;
       padding: 5px 0;
     }
+
     .bold-text {
       font-weight: 600;
       color: #155d92;
       margin: 0;
     }
   }
+
   .cta-btn---wrapper {
     display: flex;
     align-items: flex-end;
     gap: 20px;
+
     .cta-btn {
       width: 40px;
       height: 40px;
       transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-    .cta-btn:hover {
-      transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .social-wrapper {
+    width: 100%;
+    .icons-social--wrapper {
+      gap: 10px;
+      height: auto;
+    }
+  }
+
+  .bottom-wrapper {
+    align-items: center;
+
+    .titles-wrapper {
+      text-align: center;
+
+      .grey-text {
+        padding: 3px 0;
+        font-size: 0.8rem;
+      }
+    }
+
+    .cta-btn---wrapper {
+      gap: 10px;
+
+      .cta-btn {
+        width: 35px;
+        height: 35px;
+      }
     }
   }
 }

@@ -2,23 +2,43 @@
   .menuItems {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 
     a {
       text-decoration: none;
-      padding: 10px 15px;
+      padding: 8px 12px;
       color: #323232;
       font-family: Poppins;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
       transition: 0.3s ease-in-out;
 
       &:hover {
         color: #155d92;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 600;
       }
+    }
+  }
+
+  .menuImage {
+    display: none;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  .menu {
+    .menuItems {
+      display: none;
+    }
+
+    .menuImage {
+      display: flex;
+      width: 30px;
+      padding: 5px;
     }
   }
 }

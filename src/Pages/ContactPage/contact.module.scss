@@ -1,0 +1,27 @@
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  span {
+    color: #155d92;
+    font-weight: 600;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  .contact-wrapper {
+    margin-top: 10px;
+  }
+
+  .copyright {
+    margin-top: 10px;
+  }
+}

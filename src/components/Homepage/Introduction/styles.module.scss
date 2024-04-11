@@ -14,18 +14,22 @@
       border-radius: 10% 0 10% 0;
     }
   }
+
   .info-wrapper {
     display: inline-flex;
     flex-direction: column;
+
     .job:first-child {
       text-transform: uppercase;
     }
+
     .job {
       margin: 0;
       color: #bcbcbc;
       padding: 5px 0;
       max-width: 80%;
     }
+
     .name-wrapper {
       display: flex;
       flex-direction: column;
@@ -38,19 +42,65 @@
       }
     }
   }
+
   .cta-btn---wrapper {
     display: flex;
     align-items: flex-end;
     gap: 20px;
     height: 100%;
     align-items: flex-end;
+
     .cta-btn {
       width: 40px;
       height: 40px;
       transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-    .cta-btn:hover {
-      transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .introduction-wrapper {
+    align-items: center;
+    gap: 20px;
+
+    .user-img--wrapper {
+      display: flex;
+      height: 150px;
+      width: 140px;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+
+        border-radius: 15px;
+      }
+    }
+
+    .job:first-child {
+      display: none;
+    }
+    .job {
+      font-size: 0.8rem;
+    }
+    .info-wrapper {
+      .name-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+
+        .full-name {
+          margin: 0;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .cta-btn---wrapper {
+      align-items: center;
     }
   }
 }

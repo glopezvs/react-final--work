@@ -1,7 +1,16 @@
-.header{
-	display: flex;
-	justify-content:space-around;
-	align-items: center;
-	height: 50px;
-	width: auto !important;;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: auto !important;
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    width: auto !important;
+  }
 }
