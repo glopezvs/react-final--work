@@ -3,10 +3,12 @@ import styles from "../BigHeading/styles.module.scss";
 import stars from "../../../assets/star.svg";
 import notClicked from "../../../assets/notClicked.svg";
 import clicked from "../../../assets/clicked.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function BigHeading() {
   const [userData, setUserData] = useState([null]);
   const [imageSrc, setImageSrc] = useState(notClicked);
+  const navigate = useNavigate();
 
   const handleMouseEnter = () => {
     setImageSrc(clicked);
@@ -15,7 +17,9 @@ export default function BigHeading() {
   const handleMouseLeave = () => {
     setImageSrc(notClicked);
   };
-
+  const handleClick = () => {
+    navigate("/contacts");
+  };
   useEffect(() => {
     fetch("api/data.json")
       .then((res) => res.json())
@@ -48,6 +52,7 @@ export default function BigHeading() {
             alt=""
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
           />
         </div>
       </div>

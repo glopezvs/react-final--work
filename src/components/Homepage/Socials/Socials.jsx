@@ -4,10 +4,12 @@ import linkedln from "../../../assets/linkedin.svg";
 import behance from "../../../assets/behance.svg";
 import notClicked from "../../../assets/notClicked.svg";
 import clicked from "../../../assets/clicked.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Socials() {
   const [userData, setUserData] = useState([null]);
   const [imageSrc, setImageSrc] = useState(notClicked);
+  const navigate = useNavigate();
 
   const handleMouseEnter = () => {
     setImageSrc(clicked);
@@ -15,6 +17,9 @@ export default function Socials() {
 
   const handleMouseLeave = () => {
     setImageSrc(notClicked);
+  };
+  const handleClick = () => {
+    navigate("/contacts");
   };
   useEffect(() => {
     fetch("http://localhost:5173/api/data.json")
@@ -49,6 +54,7 @@ export default function Socials() {
             alt=""
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
           />
         </div>
       </div>

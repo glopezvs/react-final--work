@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import styles from "../Credential/styles.module.scss";
 import notClicked from "../../../assets/notClicked.svg";
 import clicked from "../../../assets/clicked.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Credential({ heading, subheading, image }) {
   const [userData, setUserData] = useState([null]);
   const [imageSrc, setImageSrc] = useState(notClicked);
+  const navigate = useNavigate();
 
   const handleMouseEnter = () => {
     setImageSrc(clicked);
@@ -13,6 +15,9 @@ export default function Credential({ heading, subheading, image }) {
 
   const handleMouseLeave = () => {
     setImageSrc(notClicked);
+  };
+  const handleClick = () => {
+    navigate("/about");
   };
   useEffect(() => {
     fetch("http://localhost:5173/api/data.json")
@@ -44,6 +49,7 @@ export default function Credential({ heading, subheading, image }) {
             alt=""
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
           />
         </div>
       </div>
